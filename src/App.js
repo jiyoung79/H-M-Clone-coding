@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import ProductAll from './pages/ProductAll';
@@ -19,8 +20,8 @@ import Navbar from './components/Navbar';
 
 function App() {
    return (
-     <div>
-       <Navbar />
+      <div>
+         <Navbar />
          <Routes>
             <Route path='/' element={<ProductAll />} />
             <Route path='/login' element={<Login />} />
