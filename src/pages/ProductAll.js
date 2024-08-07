@@ -14,6 +14,7 @@ const ProductAll = () => {
    useEffect(() => {
       getProducts();
    }, []);
+
    return (
       <div>
          <Container>
