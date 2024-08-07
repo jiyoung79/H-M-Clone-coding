@@ -37,7 +37,7 @@ const Navbar = () => {
          </div>
          <div className='nav_search'>
             <FontAwesomeIcon icon={faSearch} />
-            <input type='text' />
+            <input type='text' className='search_input'/>
          </div>
       </div>
    );
