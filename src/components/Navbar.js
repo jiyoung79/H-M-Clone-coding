@@ -8,13 +8,16 @@ const Navbar = () => {
    const navigate = useNavigate();
    const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성'];
 
+   const gotoLogin = () => {
+      navigate('/login');
+   };
    const gotoMainPage = () => {
       navigate('/');
    };
    return (
       <div>
          <div>
-            <div className='side_menu'>
+            <div className='side_menu' onClick={gotoLogin}>
                <FontAwesomeIcon icon={faUser} />
                <Link to={'/login'} className='loginBtn'>
                   로그인
@@ -37,7 +40,7 @@ const Navbar = () => {
          </div>
          <div className='nav_search'>
             <FontAwesomeIcon icon={faSearch} />
-            <input type='text' className='search_input'/>
+            <input type='text' className='search_input' />
          </div>
       </div>
    );

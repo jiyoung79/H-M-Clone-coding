@@ -3,6 +3,7 @@
    display: flex;
    justify-content: flex-end;
    margin: 20px;
+   cursor: pointer;
 }
 
 .side_menu .loginBtn {

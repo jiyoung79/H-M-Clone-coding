@@ -1,13 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ setAuthenticate }) => {
+   const navigate = useNavigate();
+
+   const loginUser = event => {
+      event.preventDefault();
+      setAuthenticate(true);
+      navigate('/');
+   };
+
    return (
       <div className='login_form1'>
          <div className='login_form2'>
             <h2>로그인 LOGIN</h2>
-            <form>
+            <form onSubmit={event => loginUser(event)}>
                <div className='id'>
                   <label>아이디</label>
                   <input type='text' name='name' placeholder='아이디를 입력해주세요.'></input>
@@ -26,7 +35,7 @@ const Login = () => {
                   </Link>
                </div>
                <div className='login_btn'>
-                  <Button variant='secondary' size='lg' className='btn'>
+                  <Button variant='secondary' size='lg' className='btn' type='submit'>
                      로그인
                   </Button>
                </div>
