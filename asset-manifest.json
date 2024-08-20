@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/H-M-Clone-coding/static/css/main.f4274f9e.css",
+    "main.js": "/H-M-Clone-coding/static/js/main.0fbdf4c9.js",
+    "static/js/453.53dae259.chunk.js": "/H-M-Clone-coding/static/js/453.53dae259.chunk.js",
+    "index.html": "/H-M-Clone-coding/index.html",
+    "main.f4274f9e.css.map": "/H-M-Clone-coding/static/css/main.f4274f9e.css.map",
+    "main.0fbdf4c9.js.map": "/H-M-Clone-coding/static/js/main.0fbdf4c9.js.map",
+    "453.53dae259.chunk.js.map": "/H-M-Clone-coding/static/js/453.53dae259.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4274f9e.css",
+    "static/js/main.0fbdf4c9.js"
+  ]
+}
