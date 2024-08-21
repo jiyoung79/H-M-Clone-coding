@@ -153,3 +153,52 @@ Input:focus {
    background-color: rgb(187, 187, 187);
    border: 1px solid black;
 }
+
+/* product detail page */
+
+.container {
+   margin-top: 50px;
+}
+.product_detail_img {
+   width: 250px;
+   height: auto;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.detail_info {
+   margin-left: 10px;
+}
+.detail_title {
+   font-size: 1.7rem;
+}
+
+.detail_price {
+   font-size: 1.4rem;
+}
+
+.detail_choice {
+   margin-top: 10px;
+}
+.dropdown_toggle {
+   background-color: white;
+   color: black;
+   border-radius: 0px;
+}
+
+.dropdown_toggle:hover {
+   background-color: lightgray;
+   color: black;
+}
+
+.dropdown_toggle:active,
+.dropdown_toggle.show {
+   background-color: lightgray !important;
+   border-color: lightgray !important;
+   color: black !important;
+}
+
+.product_choice {
+   width: 100%;
+   background-color: black;
+}
