@@ -41,15 +41,15 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                <FontAwesomeIcon icon={faBars} size='2x' />
             </div>
 
-            {/* 로고 섹션 */}
+            
             <div className='nav_section' onClick={gotoMainPage}>
                <img
                   width={100}
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s'
+                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s' alt=''
                />
             </div>
 
-            {/* 로그인/로그아웃 버튼 */}
+            
             <div className='side_menu'>
                <FontAwesomeIcon icon={faUser} />
                {authenticate ? (

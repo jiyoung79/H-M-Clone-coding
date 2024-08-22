@@ -9,10 +9,10 @@
 
 .side_menu {
    display: flex;
-   align-items: center; /* 아이콘과 텍스트를 수직 중앙 정렬 */
+   align-items: center; 
    cursor: pointer;
    position: absolute;
-   right: 20px; /* 오른쪽 끝에 배치 */
+   right: 20px; 
 }
 
 .side_menu .login_btn {
