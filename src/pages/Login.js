@@ -34,7 +34,7 @@ const Login = ({ setAuthenticate }) => {
                      비밀번호 찾기
                   </Link>
                </div>
-               <div className='login_btn'>
+               <div className='loginBtn'>
                   <Button variant='secondary' size='lg' className='btn' type='submit'>
                      로그인
                   </Button>

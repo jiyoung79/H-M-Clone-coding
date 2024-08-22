@@ -1,12 +1,26 @@
 /* NavBar */
-.side_menu {
+.navbar_container {
    display: flex;
-   justify-content: flex-end;
-   margin: 20px;
-   cursor: pointer;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   position: relative;
 }
 
-.side_menu .loginBtn {
+.side_menu {
+   display: flex;
+   align-items: center; /* 아이콘과 텍스트를 수직 중앙 정렬 */
+   cursor: pointer;
+   position: absolute;
+   right: 20px; /* 오른쪽 끝에 배치 */
+}
+
+.side_menu .login_btn {
+   margin-left: 10px;
+   text-decoration: none;
+   color: black;
+}
+.side_menu .logout_btn {
    margin-left: 10px;
    text-decoration: none;
    color: black;
@@ -14,12 +28,15 @@
 
 .nav_section {
    display: flex;
+
    justify-content: center;
+   margin-top: 50px;
 }
 
 .menu_area {
    display: flex;
    justify-content: center;
+   top: 50px;
 }
 
 .menu_list {
@@ -62,6 +79,70 @@
 
 .product_card:hover {
    scale: 1.1;
+}
+/* 메뉴 토글 버튼 기본으로 숨김 처리 */
+.menu_toggle {
+   display: none;
+}
+
+/* 미디어 쿼리로 모바일 스타일 적용 */
+@media (max-width: 768px) {
+   /* 메뉴 토글 버튼 모바일에서만 보이도록 설정 */
+   .menu_toggle {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1100;
+      cursor: pointer;
+   }
+
+   /* 메뉴를 사이드 메뉴로 전환 */
+   .menu_area {
+      position: fixed;
+      top: 60px; /* 로고 섹션 아래에 위치하도록 설정 */
+      left: 0;
+      width: 250px;
+      height: calc(100% - 60px); /* 로고 섹션을 제외한 전체 높이 */
+      background-color: white;
+      z-index: 1000;
+      display: none; /* 초기에는 숨김 처리 */
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+   }
+
+   .menu_list {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .menu_list li {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+   }
+
+   /* 제품 사진을 세로로 배치 */
+   .product_img {
+      width: 100%;
+      margin-bottom: 15px;
+   }
+
+   .product_card {
+      margin-top: 15px;
+      width: 100%;
+   }
+
+   .nav_search {
+      margin-top: 10px;
+      justify-content: center;
+   }
+}
+
+/* 메뉴 토글 기능을 위한 추가 스타일 */
+.menu_area.active {
+   display: flex; /* 활성화 시 메뉴가 보이도록 설정 */
 }
 
 /* LoginPage */
@@ -139,7 +220,7 @@ Input:focus {
    color: gray;
 }
 
-.login_btn {
+.loginBtn {
    display: flex;
    justify-content: center;
    margin-top: 40px;
