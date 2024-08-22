@@ -9,7 +9,7 @@ const ProductAll = () => {
    const getProducts = async () => {
       let searchQuery = query.get('q') || '';
       console.log('쿼리값은? : ', searchQuery);
-      let url = `http://localhost:4000/products?q=${searchQuery}`;
+      let url = `https://my-json-server.typicode.com/jiyoung79/H-M-Clone-coding/products?q=${searchQuery}`;
       let response = await fetch(url);
       let data = await response.json();
       console.log(data);
