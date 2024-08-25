@@ -41,21 +41,20 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                <FontAwesomeIcon icon={faBars} size='2x' />
             </div>
 
-            
             <div className='nav_section' onClick={gotoMainPage}>
                <img
                   width={100}
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s' alt=''
+                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s'
+                  alt=''
                />
             </div>
 
-            
             <div className='side_menu'>
                <FontAwesomeIcon icon={faUser} />
                {authenticate ? (
-                  <button className='logout_btn' onClick={handleLogout}>
+                  <Link to={'/'} className='logout_btn' onClick={handleLogout}>
                      로그아웃
-                  </button>
+                  </Link>
                ) : (
                   <Link to={'/login'} className='login_btn' onClick={gotoLogin}>
                      로그인
