@@ -9,10 +9,10 @@
 
 .side_menu {
    display: flex;
-   align-items: center; 
+   align-items: center;
    cursor: pointer;
    position: absolute;
-   right: 20px; 
+   right: 20px;
 }
 
 .side_menu .login_btn {
@@ -240,11 +240,16 @@ Input:focus {
 .container {
    margin-top: 50px;
 }
-.product_detail_img {
-   width: 250px;
+.container .product_detail_img {
+   width: 500px;
    height: auto;
    display: flex;
    justify-content: flex-end;
+}
+
+.container .product_detail_img img {
+   width: 350px;
+   height: auto;
 }
 
 .detail_info {
@@ -282,4 +287,33 @@ Input:focus {
 .product_choice {
    width: 100%;
    background-color: black;
+}
+
+@media (max-width: 768px) {
+   .container .product_detail_img,
+   .detail_info {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0;
+      text-align: center;
+   }
+
+   .container .product_detail_img {
+      margin-bottom: 20px;
+   }
+
+   .container .product_detail_img img {
+      max-width: 230px;
+      height: auto;
+   }
+
+   .container .row {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .container .col {
+      width: 100%;
+      text-align: center;
+   }
 }
