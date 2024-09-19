@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
+import { productAction } from '../redux/actions/productAction';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ProductAll = () => {
-   const [productList, setProductList] = useState([]);
+   const productList = useSelector(state => state.product.productList);
    const [query, setQuery] = useSearchParams();
-   const getProducts = async () => {
+   const dispatch = useDispatch();
+   const getProducts = () => {
       let searchQuery = query.get('q') || '';
       console.log('쿼리값은? : ', searchQuery);
-      let url = `https://my-json-server.typicode.com/jiyoung79/H-M-Clone-coding/products?q=${searchQuery}`;
-      let response = await fetch(url);
-      let data = await response.json();
-      console.log(data);
-      setProductList(data);
+      dispatch(productAction.getProducts(searchQuery)); // 이렇게 하면 미들웨어를 거쳐감
    };
    useEffect(() => {
       getProducts();
