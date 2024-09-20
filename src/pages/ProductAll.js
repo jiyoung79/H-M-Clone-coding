@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
 import { productAction } from '../redux/actions/productAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../redux/reducers/productReducer';
 
 const ProductAll = () => {
    const productList = useSelector(state => state.product.productList);
@@ -12,7 +13,7 @@ const ProductAll = () => {
    const getProducts = () => {
       let searchQuery = query.get('q') || '';
       console.log('쿼리값은? : ', searchQuery);
-      dispatch(productAction.getProducts(searchQuery)); // 이렇게 하면 미들웨어를 거쳐감
+      dispatch(fetchProducts(searchQuery)); // 이렇게 하면 미들웨어를 거쳐감
    };
    useEffect(() => {
       getProducts();
