@@ -233,6 +233,7 @@ Input:focus {
    border-radius: 5px;
    background-color: rgb(187, 187, 187);
    border: 1px solid black;
+   margin-bottom: 200px;
 }
 
 /* product detail page */

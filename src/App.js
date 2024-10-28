@@ -8,11 +8,12 @@ import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
 
 function App() {
-   const [authenticate, setAuthenticate] = useState(false);
+   const [authenticate, setAuthenticate] = useState(true);
 
    useEffect(() => {
       console.log('Authentication status:', authenticate);
    }, [authenticate]);
+   
 
    return (
       <div>

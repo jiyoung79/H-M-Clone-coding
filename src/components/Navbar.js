@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
    const navigate = useNavigate();
@@ -52,13 +51,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             <div className='side_menu'>
                <FontAwesomeIcon icon={faUser} />
                {authenticate ? (
-                  <Link to={'/'} className='logout_btn' onClick={handleLogout}>
+                  <button className='logout_btn' onClick={handleLogout}>
                      로그아웃
-                  </Link>
+                  </button>
                ) : (
-                  <Link to={'/login'} className='login_btn' onClick={gotoLogin}>
+                  <button className='login_btn' onClick={gotoLogin}>
                      로그인
-                  </Link>
+                  </button>
                )}
             </div>
          </div>

@@ -7,14 +7,15 @@ import { authenticateAction } from '../redux/actions/authenticateAction';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
 
 const Login = ({ setAuthenticate }) => {
-   const [id, setId] = useState('')
-   const [password,setPassword] = useState('')
+   const [id, setId] = useState('');
+   const [password, setPassword] = useState('');
    const navigate = useNavigate();
-   const dispatch = useDispatch()
+   const dispatch = useDispatch();
 
    const loginUser = event => {
       event.preventDefault();
-      dispatch(authenticateAction.login(id,password))
+      dispatch(authenticateAction.login(id, password));
+      setAuthenticate(true);
       navigate('/');
    };
 
@@ -25,11 +26,20 @@ const Login = ({ setAuthenticate }) => {
             <form onSubmit={event => loginUser(event)}>
                <div className='id'>
                   <label>아이디</label>
-                  <input type='text' name='name' placeholder='아이디를 입력해주세요.' onChange={(event)=>setId(event.target.valueAsDate)}></input>
+                  <input
+                     type='text'
+                     name='name'
+                     placeholder='아이디를 입력해주세요.'
+                     onChange={event => setId(event.target.value)}
+                  />
                </div>
                <div className='password'>
                   <label>비밀번호</label>
-                  <input type='password' name='password' placeholder='비밀번호를 입력해주세요.' onChange={(event)=>setPassword(event.target.value)}></input>
+                  <input
+                     type='password'
+                     name='password'
+                     placeholder='비밀번호를 입력해주세요.'
+                     onChange={event => setPassword(event.target.value)}></input>
                </div>
                <div className='find_idpassword'>
                   <Link to='/' className='find_id'>
