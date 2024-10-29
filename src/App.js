@@ -8,12 +8,15 @@ import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
 
 function App() {
-   const [authenticate, setAuthenticate] = useState(true);
+   const [authenticate, setAuthenticate] = useState(() => {
+
+      return JSON.parse(localStorage.getItem('authenticate')) || false;
+   });
 
    useEffect(() => {
-      console.log('Authentication status:', authenticate);
+      
+      localStorage.setItem('authenticate', JSON.stringify(authenticate));
    }, [authenticate]);
-   
 
    return (
       <div>

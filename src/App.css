@@ -15,16 +15,15 @@
    right: 20px;
 }
 
-.side_menu .login_btn {
-   margin-left: 10px;
+.navbar_container .side_menu .login_btn,
+.navbar_container .side_menu .logout_btn {
+   margin-left: 20px;
    text-decoration: none;
    color: black;
+   margin-right: 20px;
+   font-size: 1.2rem;
 }
-.side_menu .logout_btn {
-   margin-left: 10px;
-   text-decoration: none;
-   color: black;
-}
+
 
 .nav_section {
    display: flex;

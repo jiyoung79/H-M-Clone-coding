@@ -51,13 +51,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             <div className='side_menu'>
                <FontAwesomeIcon icon={faUser} />
                {authenticate ? (
-                  <button className='logout_btn' onClick={handleLogout}>
+                  <a className='logout_btn' onClick={handleLogout}>
                      로그아웃
-                  </button>
+                  </a>
                ) : (
-                  <button className='login_btn' onClick={gotoLogin}>
+                  <a className='login_btn' onClick={gotoLogin}>
                      로그인
-                  </button>
+                  </a>
                )}
             </div>
          </div>
